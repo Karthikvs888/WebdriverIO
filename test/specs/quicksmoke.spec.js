@@ -19,7 +19,7 @@ describe('Login', ()=>{
         //Using Chai JS
         chaiExpect(await Login.logo.isDisplayed()).to.be.true;
         console.log(await Login.logo.isDisplayed());
-        console.log("Check Test");
+        console.log("Check");
     })
 
     it('Verify that the user is navigated to Home page when the user enters valid login credentials.', async ()=>{
