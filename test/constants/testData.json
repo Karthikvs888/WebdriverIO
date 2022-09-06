@@ -1,0 +1,12 @@
+{
+    "stockedge": {
+        "loginUrl": ""
+    },
+
+    "login":{
+        "email": "karthikvs888@gmail.com",
+        "password": "Rock@123",
+        "invalidEmail": "karth8@gmail.com",
+        "invalidPassword": "Rock@123456"
+    }
+}

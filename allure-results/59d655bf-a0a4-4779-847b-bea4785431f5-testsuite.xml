@@ -1,0 +1,74 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1661931572216' stop='1661931587542'>
+    <name>Login</name>
+    <title>Login</title>
+    <test-cases>
+        <test-case start='1661931572216' status='passed' stop='1661931575247'>
+            <name>Verify that Stock Edge Login page is launched when the user enters valid URL</name>
+            <title>Verify that Stock Edge Login page is launched when the user enters valid URL</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.102'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1661931575247' status='failed' stop='1661931575501'>
+            <name>Verify that the following elements are displayed in the login page: Logo, Email field, Password field, Remember me? checkbox, Login button, Forgot your password? link, Search bar, Create your account button</name>
+            <title>Verify that the following elements are displayed in the login page: Logo, Email field, Password field, Remember me? checkbox, Login button, Forgot your password? link, Search bar, Create your account button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.102'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='532efb37-2eb6-4789-9137-4296303425f5-attachment.png' type='image/png' size='161468'/>
+            </attachments>
+            <failure>
+                <message>expected false to be true      
+                      actual expected
+                      
+                      falsetrue
+                      </message>
+                <stack-trace>AssertionError: expected false to be true
+                    at Context.&lt;anonymous> (E:\Web-Automation\StockEdge\test\specs\/quicksmoke.spec.js:20:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1661931575502' status='passed' stop='1661931579966'>
+            <name>Verify that the user is navigated to Home page when the user enters valid login credentials.</name>
+            <title>Verify that the user is navigated to Home page when the user enters valid login credentials.</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.102'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1661931579966' status='passed' stop='1661931587541'>
+            <name>Verify that an appropriate error message is displayed when the user tries to Login with invalid credentials.</name>
+            <title>Verify that an appropriate error message is displayed when the user tries to Login with invalid credentials.</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.102'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

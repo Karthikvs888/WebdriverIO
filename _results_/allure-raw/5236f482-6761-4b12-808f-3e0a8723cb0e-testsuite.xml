@@ -1,0 +1,91 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1661088481177' stop='1661088499940'>
+    <name>Login</name>
+    <title>Login</title>
+    <test-cases>
+        <test-case start='1661088481282' status='failed' stop='1661088485231'>
+            <name>Verify that Stock Edge Login page is launched when the user enters valid URL</name>
+            <title>Verify that Stock Edge Login page is launched when the user enters valid URL</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.82'/>
+                <parameter kind='argument' name='browserVersion' value='104.0.5112.82'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Execution video' source='50d44eee-1254-4e0b-96cd-5c58341d1a45-attachment.mp4' type='video/mp4' size='159'/>
+            </attachments>
+            <failure>
+                <message>expect(received).toEqual(expected) // deep equality
+                
+                Expected: "Log inn"
+                Received: "Log in"</message>
+                <stack-trace>Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: "Log inn"
+                Received: "Log in"
+                    at Context.&lt;anonymous> (E:\Web-Automation\StockEdge\test\specs\/quicksmoke.spec.js:10:42)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1661088485239' status='passed' stop='1661088485528'>
+            <name>Verify that the following elements are displayed in the login page: Logo, Email field, Password field, Remember me? checkbox, Login button, Forgot your password? link, Search bar, Create your account button</name>
+            <title>Verify that the following elements are displayed in the login page: Logo, Email field, Password field, Remember me? checkbox, Login button, Forgot your password? link, Search bar, Create your account button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.82'/>
+                <parameter kind='argument' name='browserVersion' value='104.0.5112.82'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1661088485530' status='passed' stop='1661088490998'>
+            <name>Verify that the user is navigated to Home page when the user enters valid login credentials.</name>
+            <title>Verify that the user is navigated to Home page when the user enters valid login credentials.</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.82'/>
+                <parameter kind='argument' name='browserVersion' value='104.0.5112.82'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1661088490999' status='failed' stop='1661088499937'>
+            <name>Verify that an appropriate error message is displayed when the user tries to Login with invalid credentials.</name>
+            <title>Verify that an appropriate error message is displayed when the user tries to Login with invalid credentials.</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.82'/>
+                <parameter kind='argument' name='browserVersion' value='104.0.5112.82'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Execution video' source='b33deea8-4312-449f-a805-c527a964819d-attachment.mp4' type='video/mp4' size='191'/>
+            </attachments>
+            <failure>
+                <message>expected 'Invalid login attempt.' to deeply equal 'iInvalid login attempt.'      
+                      actual expected
+                      
+                      'InvalidiInvalid login attempt.'
+                      </message>
+                <stack-trace>AssertionError: expected 'Invalid login attempt.' to deeply equal 'iInvalid login attempt.'
+                    at Context.&lt;anonymous> (E:\Web-Automation\StockEdge\test\specs\/quicksmoke.spec.js:39:65)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
