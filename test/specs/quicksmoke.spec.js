@@ -10,6 +10,7 @@ describe('Login', ()=>{
         expect(await browser.getTitle()).toEqual('Log in');
         console.log("Changes made in repo - GitHub Pull");
         console.log("Test1"); 
+        console.log("Test2");
     });
 
     it('Verify that the following elements are displayed in the login page: Logo, Email field, Password field, Remember me? checkbox, Login button, Forgot your password? link, Search bar, Create your account button', async ()=>{
