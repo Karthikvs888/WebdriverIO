@@ -250,6 +250,15 @@ exports.config = {
      ],
     ],
     */
+
+    /*
+    reporters: [                                // Spec reporter + junit reporter
+        'spec',
+        ['junit', {
+            outputDir: './junitReport'
+        }]
+    ],
+    */
     
     //
     // Options to be passed to Mocha.
