@@ -257,7 +257,6 @@ exports.config = {
             outputDir: './junitReport',
             outputFileFormat: function(options){
                 return 'results.xml'                                        // Specify which file format you want it to return
-                //return 'results-${new Date().getTime()}.xml'                // To make the name of the output file unique
             }
         }]
     ],
