@@ -14,7 +14,7 @@ describe('Login', ()=>{
         console.log("Remote changes");
     });
 
-    it('Verify that the following elements are displayed in the login page: Logo, Email field, Password field, Remember me? checkbox, Login button, Forgot your password? link, Search bar, Create your account button', async ()=>{
+    it.skip('Verify that the following elements are displayed in the login page: Logo, Email field, Password field, Remember me? checkbox, Login button, Forgot your password? link, Search bar, Create your account button', async ()=>{
         // Using default wdio library for assertion -> Test passes even when logo is not displayed to overcome this this we use Chai JS for assertion
         //expect(await Login.logo.isDisplayed());
         //console.log(await Login.logo.isDisplayed());

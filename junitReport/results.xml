@@ -1,95 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Login" timestamp="2022-09-11T21:03:39" time="19.33" tests="4" failures="1" errors="1" skipped="0">
+  <testsuite name="Login" timestamp="2022-09-11T22:11:43" time="16.591" tests="4" failures="0" errors="0" skipped="1">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="Login"/>
       <property name="capabilities" value="chrome.105_0_5195_102.windows"/>
       <property name="file" value=".\test\specs\quicksmoke.spec.js"/>
     </properties>
-    <testcase classname="chrome.105_0_5195_102.windows.Login" name="Verify that Stock Edge Login page is launched when the user enters valid URL" time="3.047">
+    <testcase classname="chrome.105_0_5195_102.windows.Login" name="Verify that Stock Edge Login page is launched when the user enters valid URL" time="3.017">
       <system-out><![CDATA[
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/window/maximize - {}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/url - {"url":"https://stockedge.com/Account/Login"}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/window/maximize - {}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/url - {"url":"https://stockedge.com/Account/Login"}
 RESULT: {}
 RESULT: {"url":"https://stockedge.com/Account/Login"}
-COMMAND: GET /session/c17b261cfd870e4a77c2d4416da09516/title - {}
+COMMAND: GET /session/178ae9a4549ce4f8c49be33176495c4c/title - {}
 RESULT: {}
 ]]></system-out>
     </testcase>
-    <testcase classname="chrome.105_0_5195_102.windows.Login" name="Verify that the following elements are displayed in the login page Logo Email field Password field Remember me checkbox Login button Forgot your password link Search bar Create your account button" time="0.202">
-      <failure/>
-      <error message="expected false to be true      &#xA;      actual expected&#xA;      &#xA;      falsetrue&#xA;      "/>
-      <system-out><![CDATA[
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element - {"using":"css selector","value":"[value=\"Logoooin\"]"}
-RESULT: {"using":"css selector","value":"[value=\"Logoooin\"]"}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element - {"using":"css selector","value":"[value=\"Logoooin\"]"}
-RESULT: {"using":"css selector","value":"[value=\"Logoooin\"]"}
-COMMAND: GET /session/c17b261cfd870e4a77c2d4416da09516/screenshot - {}
-]]></system-out>
-      <system-err><![CDATA[
-AssertionError: expected false to be true
-    at Context.<anonymous> (E:\Web-Automation\StockEdge\test\specs\/quicksmoke.spec.js:24:9)
-]]></system-err>
+    <testcase classname="chrome.105_0_5195_102.windows.Login" name="Verify that the following elements are displayed in the login page Logo Email field Password field Remember me checkbox Login button Forgot your password link Search bar Create your account button" time="0">
+      <skipped/>
     </testcase>
-    <testcase classname="chrome.105_0_5195_102.windows.Login" name="Verify that the user is navigated to Home page when the user enters valid login credentials" time="7.849">
+    <testcase classname="chrome.105_0_5195_102.windows.Login" name="Verify that the user is navigated to Home page when the user enters valid login credentials" time="5.786">
       <system-out><![CDATA[
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element - {"using":"css selector","value":"#Email"}
-RESULT: {}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element - {"using":"css selector","value":"#Email"}
 RESULT: {"using":"css selector","value":"#Email"}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element/002a8315-50e1-4dfb-8d8e-8bb09b50129a/clear - {}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element/715d2975-a791-4115-a52f-8f208749173b/clear - {}
 RESULT: {}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element/002a8315-50e1-4dfb-8d8e-8bb09b50129a/value - {"text":"karthikvs888@gmail.com"}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element/715d2975-a791-4115-a52f-8f208749173b/value - {"text":"karthikvs888@gmail.com"}
 RESULT: {"text":"karthikvs888@gmail.com"}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element - {"using":"css selector","value":"#Password"}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element - {"using":"css selector","value":"#Password"}
 RESULT: {"using":"css selector","value":"#Password"}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element/43688e13-ea69-4c17-b9cd-49b0cd1225d3/clear - {}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element/fe9f4e14-9854-4b6a-8e70-de158c96151c/clear - {}
 RESULT: {}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element/43688e13-ea69-4c17-b9cd-49b0cd1225d3/value - {"text":"Rock@123"}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element/fe9f4e14-9854-4b6a-8e70-de158c96151c/value - {"text":"Rock@123"}
 RESULT: {"text":"Rock@123"}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element - {"using":"xpath","value":"//input[@class='btn btn-blue w-100']"}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element - {"using":"xpath","value":"//input[@class='btn btn-blue w-100']"}
 RESULT: {"using":"xpath","value":"//input[@class='btn btn-blue w-100']"}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element/ce90162b-dbd1-42f1-8e5c-062a201907af/click - {}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element/c6da161f-81d1-4110-b215-d39e5a0303da/click - {}
 RESULT: {}
-COMMAND: GET /session/c17b261cfd870e4a77c2d4416da09516/title - {}
+COMMAND: GET /session/178ae9a4549ce4f8c49be33176495c4c/title - {}
 RESULT: {}
 ]]></system-out>
     </testcase>
-    <testcase classname="chrome.105_0_5195_102.windows.Login" name="Verify that an appropriate error message is displayed when the user tries to Login with invalid credentials" time="8.227">
+    <testcase classname="chrome.105_0_5195_102.windows.Login" name="Verify that an appropriate error message is displayed when the user tries to Login with invalid credentials" time="7.783">
       <system-out><![CDATA[
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/window/maximize - {}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element - {"using":"css selector","value":"#Email"}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/url - {"url":"https://stockedge.com/Account/Login"}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/window/maximize - {}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element - {"using":"css selector","value":"#Email"}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/url - {"url":"https://stockedge.com/Account/Login"}
 RESULT: {}
 RESULT: {"using":"css selector","value":"#Email"}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/elements - {"using":"css selector","value":"#Email"}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/elements - {"using":"css selector","value":"#Email"}
 RESULT: {"url":"https://stockedge.com/Account/Login"}
 RESULT: {"using":"css selector","value":"#Email"}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element - {"using":"css selector","value":"#Email"}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element - {"using":"css selector","value":"#Email"}
 RESULT: {"using":"css selector","value":"#Email"}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element/39c04165-81a1-4c56-81fc-2d4e224cd59b/clear - {}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element/ab50a3d5-5126-4329-a9ec-17f9be1814e3/clear - {}
 RESULT: {}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element/39c04165-81a1-4c56-81fc-2d4e224cd59b/value - {"text":"karth8@gmail.com"}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element/ab50a3d5-5126-4329-a9ec-17f9be1814e3/value - {"text":"karth8@gmail.com"}
 RESULT: {"text":"karth8@gmail.com"}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element - {"using":"css selector","value":"#Password"}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element - {"using":"css selector","value":"#Password"}
 RESULT: {"using":"css selector","value":"#Password"}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element/3406a8e3-c770-41fb-8c99-477e5b51588f/clear - {}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element/50c64df1-74b3-4b75-a5f6-68a6dfc85d6c/clear - {}
 RESULT: {}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element/3406a8e3-c770-41fb-8c99-477e5b51588f/value - {"text":"Rock@123456"}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element/50c64df1-74b3-4b75-a5f6-68a6dfc85d6c/value - {"text":"Rock@123456"}
 RESULT: {"text":"Rock@123456"}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element - {"using":"xpath","value":"//input[@class='btn btn-blue w-100']"}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element - {"using":"xpath","value":"//input[@class='btn btn-blue w-100']"}
 RESULT: {"using":"xpath","value":"//input[@class='btn btn-blue w-100']"}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element/110d1e9d-4061-4c58-96fe-2f941f25a3a7/click - {}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element/7c74193f-8675-466e-a08e-a08b6a43a640/click - {}
 RESULT: {}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element - {"using":"css selector","value":".validation-summary-errors.text-danger"}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element - {"using":"css selector","value":".validation-summary-errors.text-danger"}
 RESULT: {"using":"css selector","value":".validation-summary-errors.text-danger"}
-COMMAND: GET /session/c17b261cfd870e4a77c2d4416da09516/element/d804bdfb-5c02-4caa-af2f-8a278b6b6214/text - {}
+COMMAND: GET /session/178ae9a4549ce4f8c49be33176495c4c/element/d679f00b-01f7-4d82-baf7-0a1ff59d342d/text - {}
 RESULT: {}
-COMMAND: POST /session/c17b261cfd870e4a77c2d4416da09516/element - {"using":"css selector","value":".validation-summary-errors.text-danger"}
+COMMAND: POST /session/178ae9a4549ce4f8c49be33176495c4c/element - {"using":"css selector","value":".validation-summary-errors.text-danger"}
 RESULT: {"using":"css selector","value":".validation-summary-errors.text-danger"}
-COMMAND: GET /session/c17b261cfd870e4a77c2d4416da09516/element/d804bdfb-5c02-4caa-af2f-8a278b6b6214/text - {}
+COMMAND: GET /session/178ae9a4549ce4f8c49be33176495c4c/element/d679f00b-01f7-4d82-baf7-0a1ff59d342d/text - {}
 RESULT: {}
-COMMAND: DELETE /session/c17b261cfd870e4a77c2d4416da09516 - {}
+COMMAND: DELETE /session/178ae9a4549ce4f8c49be33176495c4c - {}
 RESULT: {}
 ]]></system-out>
     </testcase>

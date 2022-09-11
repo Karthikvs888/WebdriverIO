@@ -146,7 +146,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    //reporters: ['spec'],                    // Spec reporter
+    reporters: ['spec'],                    // Spec reporter
 
     /*
     reporters: [['allure', {                  // Allure reporter
@@ -251,6 +251,7 @@ exports.config = {
     ],
     */
 
+    /*
     reporters: [                                    // Spec reporter + junit reporter
         'spec',
         ['junit', {
@@ -260,6 +261,24 @@ exports.config = {
             }
         }]
     ],
+    */
+
+    /*
+    reporters: [                                                            // Spec reporter + junit reporter + Allure reporter
+        'spec',
+        ['junit', {
+            outputDir: './junitReport',
+            outputFileFormat: function(options){
+                return 'results.xml'                                        // Specify which file format you want it to return
+            }
+        }],
+        ['allure', {          
+            outputDir: 'allure-results',
+            disableWebdriverStepsReporting: true,
+            disableWebdriverScreenshotsReporting: false,
+        }]
+    ],
+    */
     
     //
     // Options to be passed to Mocha.
@@ -365,7 +384,7 @@ exports.config = {
     // afterTest: function(test, context, { error, result, duration, passed, retries }) {
     // },
     
-    
+    /*
     // To get Error Screenshot in errorShots project folder
     afterTest: function (
         test, 
@@ -382,7 +401,7 @@ exports.config = {
         console.log('\n\tScreenshot location:', filePath, '\n');
         }
     },
-    
+    */
 
     /*
     // To get Error Screenshot in Allure Report
