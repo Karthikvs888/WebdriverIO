@@ -13,6 +13,7 @@ describe('Login', ()=>{
         //console.log("Local changes");
         //console.log("Remote changes");
     });
+
     /*
     it.skip('Verify that the following elements are displayed in the login page: Logo, Email field, Password field, Remember me? checkbox, Login button, Forgot your password? link, Search bar, Create your account button', async ()=>{
         // Using default wdio library for assertion -> Test passes even when logo is not displayed to overcome this this we use Chai JS for assertion
@@ -22,7 +23,7 @@ describe('Login', ()=>{
 
         //Using Chai JS
         chaiExpect(await Login.logo.isDisplayed()).to.be.true;
-        //console.log(await Login.logo.isDisplayed());
+        console.log(await Login.logo.isDisplayed());
         //console.log("Check Test Github");
     })
     */

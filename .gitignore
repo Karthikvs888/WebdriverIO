@@ -1,0 +1,9 @@
+# reports
+/_results_
+/allure-report
+/allure-results
+/errorShots
+/junitReport
+
+# dependencies
+/node_modules

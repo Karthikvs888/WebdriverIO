@@ -24,14 +24,27 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        './test/specs/quicksmoke.spec.js',
+        './test/specs/paralleltest.spec.js'
     ],
     // define specific suites
-        suites: {
-            smoke: [
-                './test/specs/quicksmoke.spec.js'
+    //
+    suites: {
+        quickSmoke: [
+            [
+                "./test/specs/quicksmoke.spec.js",
+                "./test/specs/paralleltest.spec.js"
             ]
-        },
+        ],
+        smoke: [
+            [
+                "./test/specs/test1.spec.js",
+                "./test/specs/test2.spec.js"
+            ],
+            "./test/specs/test3.spec.js"
+        ]
+    },
+
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -66,12 +79,22 @@ exports.config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        acceptInsecureCerts: true,
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-        // excludeDriverLogs: ['bugreport', 'server'],
-    }],
+        },
+        /*
+        {
+            maxInstances: 5,
+            browserName: 'firefox',
+        },
+        {
+            maxInstances: 5,
+            browserName: 'MicrosoftEdge',
+        },
+        */
+    ],
     //
     // ===================
     // Test Configurations
@@ -123,8 +146,11 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     //
-    // Chromedriver Service
+    // Chromedriver Service 
     services: ['chromedriver'],
+    //    
+    // Selenium Standalone Service 
+    //services: ['selenium-standalone'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -194,7 +220,7 @@ exports.config = {
         // Set the Slack Options used webhook.
         slackOptions: {
             type: 'webhook',
-            webhook: process.env.SLACK_WEBHOOK_URL || "https://hooks.slack.com/services/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",
+            webhook: process.env.SLACK_WEBHOOK_URL || "https://hooks.slack.com/services/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",
             slackName: "WebdriverIO Reporter",
             slackIconUrl: "https://webdriver.io/img/webdriverio.png",
         },
@@ -228,7 +254,7 @@ exports.config = {
         // Set the Slack Options used webhook.
         slackOptions: {
             type: 'webhook',
-            webhook: process.env.SLACK_WEBHOOK_URL || "https://hooks.slack.com/services/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",
+            webhook: process.env.SLACK_WEBHOOK_URL || "https://hooks.slack.com/services/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",
             slackName: "WebdriverIO Reporter",
             slackIconUrl: "https://webdriver.io/img/webdriverio.png",
         },
@@ -249,7 +275,8 @@ exports.config = {
         }
      ],
     ],
-    */
+    *
+
 
     /*
     reporters: [                                    // Spec reporter + junit reporter
