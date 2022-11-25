@@ -9,8 +9,8 @@
 /node_modules
 
 # files
-/test/pageobjects/umlogin.page.js
-/test/specs/featuresUM.spec.js
+/test/pageobjects/exlogin.page.js
+/test/specs/exfeatures.spec.js
 
 # screenshots
 /screenshots
