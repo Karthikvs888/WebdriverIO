@@ -28,7 +28,6 @@ describe('Login', ()=>{
     */
 
     it('Verify that the user is navigated to Home page when the user enters valid login credentials.', async ()=>{
-        //await Login.login("karthikvs888gmail.com", "Rock@123")
         await Login.login(testData.login.email, testData.login.password)
         expect(await browser.getTitle()).toEqual('Best Indian Stock Market App for Android and Iphone - StockEdge');
     })

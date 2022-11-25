@@ -15,12 +15,14 @@
     "@wdio/cli": "^7.20.6",
     "chai": "^4.3.6",
     "node-tesseract-ocr": "^2.2.1",
+    "robotjs": "^0.6.0",
     "wdio-video-reporter": "^3.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",
     "@babel/preset-env": "^7.18.6",
     "@babel/register": "^7.18.6",
+    "@faker-js/faker": "^7.6.0",
     "@moroo/wdio-slack-reporter": "^2.1.1",
     "@wdio/allure-reporter": "^7.21.0",
     "@wdio/junit-reporter": "^7.24.0",
@@ -28,7 +30,7 @@
     "@wdio/mocha-framework": "^7.20.3",
     "@wdio/selenium-standalone-service": "^7.24.0",
     "@wdio/spec-reporter": "^7.20.3",
-    "chromedriver": "^105.0.1",
+    "chromedriver": "^107.0.3",
     "wdio-chromedriver-service": "^7.3.2"
   }
 }

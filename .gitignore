@@ -7,3 +7,10 @@
 
 # dependencies
 /node_modules
+
+# files
+/test/pageobjects/umlogin.page.js
+/test/specs/featuresUM.spec.js
+
+# screenshots
+/screenshots

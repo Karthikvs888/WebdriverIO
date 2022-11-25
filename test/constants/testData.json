@@ -4,9 +4,14 @@
     },
 
     "login":{
-        "email": "karthikvs888@gmail.com",
+        "email": "karthikvs444@gmail.com",
         "password": "Rock@123",
-        "invalidEmail": "karth8@gmail.com",
+        "invalidEmail": "matrix@gmail.com",
         "invalidPassword": "Rock@123456"
+    },
+
+    "umlogin":{
+        "email": "clarke@yopmail.com",
+        "password": "qqqqqq"
     }
 }
