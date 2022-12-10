@@ -25,8 +25,8 @@ exports.config = {
     //
     specs: [
         './test/specs/quicksmoke.spec.js',
-        './test/specs/paralleltest.spec.js',
-        './test/specs/features1.spec.js'
+        // './test/specs/paralleltest.spec.js',
+        // './test/specs/features1.spec.js'
     ],
     // define specific suites
     //

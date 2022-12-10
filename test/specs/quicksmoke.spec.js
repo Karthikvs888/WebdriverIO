@@ -30,7 +30,7 @@ describe('Login', ()=>{
     it('Verify that the user is navigated to Home page when the user enters valid login credentials.', async ()=>{
         //await Login.login("karthikvs444gmail.com", "Rock@123")
         await Login.login(testData.login.email, testData.login.password)
-        expect(await browser.getTitle()).toEqual('Best Indian Stock Market App for Android and Iphone - StockEdge');
+        expect(await browser.getTitle()).toEqual('Best Indian Stock Market App for Android and iPhone - StockEdge');
     })
 
     it('Verify that an appropriate error message is displayed when the user tries to Login with invalid credentials.', async ()=>{
