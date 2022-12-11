@@ -173,7 +173,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],                    // Spec reporter
+    //reporters: ['spec'],                    // Spec reporter
 
     /*
     reporters: [['allure', {                  // Allure reporter
@@ -276,11 +276,10 @@ exports.config = {
         }
      ],
     ],
-    *
+    */
 
-
-    /*
-    reporters: [                                    // Spec reporter + junit reporter
+    
+    reporters: [                                    // Spec reporter + junit reporter [For Jenkins - Should be enabled when running build via Jenkins]
         'spec',
         ['junit', {
             outputDir: './junitReport',
@@ -289,7 +288,7 @@ exports.config = {
             }
         }]
     ],
-    */
+    
 
     /*
     reporters: [                                                            // Spec reporter + junit reporter + Allure reporter
