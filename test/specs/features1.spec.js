@@ -254,7 +254,7 @@ describe('Login - ', ()=>{
         await browser.pause(2000);
     })
 
-    it('Faker JS - To generate random email, name, id etc', async ()=>{
+    xit('Faker JS - To generate random email, name, id etc', async ()=>{
         await browser.url("https://stockedge.com/Account/Login");
         console.log(await browser.getUrl());
         await browser.maximizeWindow();
@@ -269,6 +269,12 @@ describe('Login - ', ()=>{
         await browser.pause(1000);
         await loginButton.click();
         await browser.pause(2000);
+    })
+
+    it('Pass multiple data from testData - StockEdge Login', async ()=>{
+        Login.open();
+        await Login.loginMultipleData(testData.login)
+        expect(await browser.getTitle()).toEqual('Best Indian Stock Market App for Android and iPhone - StockEdge');
     })
 
 })

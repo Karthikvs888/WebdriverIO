@@ -35,6 +35,14 @@ class Login extends Page{
         await browser.pause(2000);
     }
 
+    async loginMultipleData (loginData) {
+        await this.emailField.setValue(loginData.email);
+        await this.passwordField.setValue(loginData.password);
+        await browser.pause(1000);
+        await this.loginButton.click();
+        await browser.pause(2000);
+    }
+
     async open () {
         super.open("https://stockedge.com/Account/Login");
         await browser.maximizeWindow();

@@ -44,4 +44,11 @@ describe('Login', ()=>{
         chaiExpect(await Login.errorInvalidLoginCred.getText()).eql('Invalid login attempt.');
     })
 
+    it('Verify that the user is navigated to Home page when the user enters valid login credentials.', async ()=>{
+        //await Login.login("karthikvs444gmail.com", "Rock@123")
+        Login.open();
+        await Login.loginMultipleData(testData.login)
+        expect(await browser.getTitle()).toEqual('Best Indian Stock Market App for Android and iPhone - StockEdge');
+    })
+
 })
