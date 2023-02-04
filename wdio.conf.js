@@ -430,14 +430,14 @@ exports.config = {
     },
     */
 
-    /*
+    
     // To get Error Screenshot in Allure Report
     afterTest: async function(test, context, { error, result, duration, passed, retries }) {
         if (error) {
             await browser.takeScreenshot();
         }
     },
-    */
+    
   
     /**
      * Hook that gets executed after the suite has ended
