@@ -411,7 +411,7 @@ exports.config = {
     // afterTest: function(test, context, { error, result, duration, passed, retries }) {
     // },
     
-    /*
+    
     // To get Error Screenshot in errorShots project folder
     afterTest: function (
         test, 
@@ -428,7 +428,7 @@ exports.config = {
         console.log('\n\tScreenshot location:', filePath, '\n');
         }
     },
-    */
+    
 
     /*
     // To get Error Screenshot in Allure Report
