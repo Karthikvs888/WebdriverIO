@@ -48,7 +48,7 @@ describe('Login', ()=>{
         //await Login.login("karthikvs444gmail.com", "Rock@123")
         Login.open();
         await Login.loginMultipleData(testData.login)
-        expect(await browser.getTitle()).toEqual('Best Indian Stock Market App for Android and iPhone - StockEdgee');
+        expect(await browser.getTitle()).toEqual('Best Indian Stock Market App for Android and iPhone - StockEdge');
     })
 
 })
