@@ -2,7 +2,7 @@
 /_results_
 /allure-report
 /allure-results
-#/errorShots
+/errorShots
 /junitReport
 
 # dependencies
