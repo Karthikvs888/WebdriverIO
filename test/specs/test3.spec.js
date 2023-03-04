@@ -37,9 +37,9 @@ describe('Login', ()=>{
         await Login.login(testData.login.invalidEmail, testData.login.invalidPassword);
         await browser.pause(3000);
         console.log(await Login.errorInvalidLoginCred.getText());
-        //Using default wdio expect
         //expect(await Login.errorInvalidLoginCred.getText()).toEqual('iInvalid login attempt.');
-        //Using Chai JS expect
+
+        //Using Chai JS
         chaiExpect(await Login.errorInvalidLoginCred.getText()).eql('Invalid login attempt.');
     })
 
