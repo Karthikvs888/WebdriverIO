@@ -271,7 +271,13 @@ describe('Login - ', ()=>{
         await browser.pause(2000);
     })
 
-    it('Pass multiple data from testData - StockEdge Login', async ()=>{
+    xit('Pass multiple data from testData - StockEdge Login', async ()=>{
+        Login.open();
+        await Login.loginMultipleData(testData.login)
+        expect(await browser.getTitle()).toEqual('Best Indian Stock Market App for Android and iPhone - StockEdge');
+    })
+
+    it('Need to add new feature as of now duplicate of the above one', async ()=>{
         Login.open();
         await Login.loginMultipleData(testData.login)
         expect(await browser.getTitle()).toEqual('Best Indian Stock Market App for Android and iPhone - StockEdge');
