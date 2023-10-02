@@ -7,7 +7,7 @@ describe('Login', ()=>{
     it('Verify that Stock Edge Login page is launched when the user enters valid URL', async ()=>{
         Login.open();
         await browser.pause(3000);
-        expect(await browser.getTitle()).toEqual('Log in');
+        expect(await browser.getTitle()).toEqual('Sign In');
         //console.log("Changes made in repo - GitHub Pull");
 
         //console.log("Local changes");
@@ -31,17 +31,19 @@ describe('Login', ()=>{
         //await Login.login("karthikvs444gmail.com", "Rock@123")
         await Login.login(testData.login.email, testData.login.password)
         expect(await browser.getTitle()).toEqual('Best Indian Stock Market App for Android and iPhone - StockEdge');
+        await Login.logout();
     })
 
     it('Verify that an appropriate error message is displayed when the user tries to Login with invalid credentials.', async ()=>{
         Login.open();
         await Login.login(testData.login.invalidEmail, testData.login.invalidPassword);
-        await browser.pause(3000);
+        // await browser.pause(3000);
+        await Login.errorInvalidLoginCred.waitForDisplayed({ timeout: 3000 });
         console.log(await Login.errorInvalidLoginCred.getText());
         //expect(await Login.errorInvalidLoginCred.getText()).toEqual('iInvalid login attempt.');
 
         //Using Chai JS
-        chaiExpect(await Login.errorInvalidLoginCred.getText()).eql('Invalid login attempt.');
+        chaiExpect(await Login.errorInvalidLoginCred.getText()).eql('Invalid username or password');
     })
 
     it('Verify that the user is navigated to Home page when the user enters valid login credentials.', async ()=>{

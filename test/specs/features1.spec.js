@@ -5,7 +5,7 @@ import { faker } from '@faker-js/faker';
 
 describe('Login - ', ()=>{
 
-    xit("Robot JS - Move Mouse", async ()=>{
+    it("Robot JS - Move Mouse", async ()=>{
         await browser.url('https://www.globalsqa.com/demo-site/draganddrop/');
         console.log(await browser.getUrl());
         await browser.maximizeWindow();
@@ -45,7 +45,7 @@ describe('Login - ', ()=>{
 
     });
 
-    xit("Robot JS - Drag and Drop", async ()=>{
+    it("Robot JS - Drag and Drop", async ()=>{
         await browser.url('https://demo.guru99.com/test/drag_drop.html');
         console.log(await browser.getUrl());
 
@@ -91,7 +91,7 @@ describe('Login - ', ()=>{
 
     });
 
-    xit("wdio-v7 Drag and Drop", async ()=>{
+    it("wdio-v7 Drag and Drop", async ()=>{
         await browser.url('https://demo.guru99.com/test/drag_drop.html');
         console.log(await browser.getUrl());
 
@@ -105,7 +105,7 @@ describe('Login - ', ()=>{
         await browser.pause(5000);
     });
 
-    xit("Convert String to Integer after getText", async ()=>{
+    it("Convert String to Integer after getText", async ()=>{
         await browser.url('https://demo.guru99.com/test/drag_drop.html');
         console.log(await browser.getUrl());
 
@@ -128,7 +128,7 @@ describe('Login - ', ()=>{
 
     });
 
-    xit("Upload a file - Using wdio-v7 Example_1 [When input file is not hidden]", async ()=>{
+    it("Upload a file - Using wdio-v7 Example_1 [When input file is not hidden]", async ()=>{
         await browser.url('https://the-internet.herokuapp.com/upload')
         await browser.maximizeWindow();
 
@@ -141,7 +141,7 @@ describe('Login - ', ()=>{
         await browser.pause(4000);
     });
 
-    xit("Upload a file - Using wdio-v7 Example_2 [When input file is hidden] and browser.execute using css selector(commented)", async ()=>{
+    it("Upload a file - Using wdio-v7 Example_2 [When input file is hidden] and browser.execute using css selector(commented)", async ()=>{
 
         await browser.url('https://online2pdf.com/')
         await browser.maximizeWindow();
@@ -175,7 +175,7 @@ describe('Login - ', ()=>{
         await browser.pause(10000);
     });
 
-    xit("getText from list of items (map) Example Method-1", async ()=>{
+    it("getText from list of items (map) Example Method-1", async ()=>{
 
         await browser.url('https://webdriver.io')
 
@@ -196,7 +196,7 @@ describe('Login - ', ()=>{
          */
     });  
 
-    xit("Open a new tab, switch between tabs and close a tab ", async ()=>{
+    it("Open a new tab, switch between tabs and close a tab ", async ()=>{
         await browser.url("https://stockedge.com/Account/Login");
         console.log(await browser.getUrl());
 
@@ -223,10 +223,13 @@ describe('Login - ', ()=>{
         await browser.switchToWindow(handles[1])
         await browser.closeWindow()
 
+        // Since the 1st index chrome tab is closed we get "no such window: target window already closed" error so we need to switch to an open tab
+        await browser.switchToWindow(handles[0])
+
         await browser.pause(3000);        
     });
 
-    xit("Tesseract - Read text from a image", async ()=>{
+    it("Tesseract - Read text from a image", async ()=>{
 
         const tesseract = require("node-tesseract-ocr")
 
@@ -234,18 +237,18 @@ describe('Login - ', ()=>{
         
         const img = "E:/Extras/TesseractImage.jpg"
         const text = await tesseract.recognize(img)
-        console.log(text) 
+        console.log(text)  
     });
 
-    xit('Math.random - To generate unique email, name, id etc everytime [StockEdge]', async ()=>{
+    it('Math.random - To generate unique email, name, id etc everytime [StockEdge]', async ()=>{
         await browser.url("https://stockedge.com/Account/Login");
         console.log(await browser.getUrl());
         await browser.maximizeWindow();
         await browser.pause(2000);
 
-        const emailField = await $('#Email');
+        const emailField = await $('#Username');
         const passwordField = await $('#Password');
-        const loginButton = await $("//input[@class='btn btn-blue w-100']");
+        const loginButton = await $(".btn.btn-red.w-100");
         
         await emailField.setValue(`test-${Math.floor(Math.random() * 9999)}@yopmail.com`); // To pass a random email everytime
         await passwordField.setValue("123456");
@@ -254,15 +257,15 @@ describe('Login - ', ()=>{
         await browser.pause(2000);
     })
 
-    xit('Faker JS - To generate random email, name, id etc', async ()=>{
+    it('Faker JS - To generate random email, name, id etc', async ()=>{
         await browser.url("https://stockedge.com/Account/Login");
         console.log(await browser.getUrl());
         await browser.maximizeWindow();
         await browser.pause(2000);
 
-        const emailField = await $('#Email');
+        const emailField = await $('#Username');
         const passwordField = await $('#Password');
-        const loginButton = await $("//input[@class='btn btn-blue w-100']");
+        const loginButton = await $(".btn.btn-red.w-100");
         
         await emailField.setValue(faker.name.fullName()); // To pass a random email everytime
         await passwordField.setValue("123456");

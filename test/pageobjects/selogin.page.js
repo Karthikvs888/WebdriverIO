@@ -4,7 +4,7 @@ import Page from "./page";
 class Login extends Page{
 
     get emailField () {
-        return $('#Email');
+        return $('#Username');
     } 
 
     get passwordField () {
@@ -12,7 +12,15 @@ class Login extends Page{
     }
 
     get loginButton () {
-        return $("//input[@class='btn btn-blue w-100']");
+        return $(".btn.btn-red.w-100");
+    }
+
+    get profileDropdown () {
+        return $("#logoutForm .btn.btn-menu.dropdown-toggle.no-hover:first-child");
+    }
+
+    get logoutOption () {
+        return $("//a[.='Logout']");
     }
 
     get errorInvalidLoginCred () {
@@ -40,6 +48,14 @@ class Login extends Page{
         await this.passwordField.setValue(loginData.password);
         await browser.pause(1000);
         await this.loginButton.click();
+        await browser.pause(2000);
+    }
+
+    async logout () { 
+        await (await this.profileDropdown).waitForDisplayed();
+        await this.profileDropdown.click();
+        await (await this.logoutOption).waitForDisplayed();
+        await this.logoutOption.click();
         await browser.pause(2000);
     }
 
